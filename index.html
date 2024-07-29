@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Password Generator by Noval Aditya</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Password Generator</h1>
+        <button id="darkModeToggle">Dark Mode</button>
+      </header>
+
+      <main>
+        <form id="passwordForm">
+          <label for="passwordLength">Password Length:</label>
+          <input
+            type="number"
+            id="passwordLength"
+            name="passwordLength"
+            min="1"
+            max="100"
+            value="12"
+            required
+          />
+
+          <label for="passwordCount"
+            >Number of Passwords:</label
+          >
+          <input
+            type="number"
+            id="passwordCount"
+            name="passwordCount"
+            min="1"
+            max="100"
+            value="1"
+            required
+          />
+
+          <label for="fileName">Name Password:</label>
+          <input
+            type="text"
+            id="fileName"
+            name="fileName"
+            placeholder="passwords"
+            required
+          />
+
+          <div class="checkbox-group">
+            <label
+              ><input type="checkbox" id="includeAlphabet" checked /> Include
+              Alphabet</label
+            >
+            <label
+              ><input type="checkbox" id="includeNumeric" checked /> Include
+              Numeric</label
+            >
+            <label
+              ><input type="checkbox" id="includeSymbols" /> Include
+              Symbols</label
+            >
+          </div>
+
+          <button type="button" id="generateButton">Generate Password</button>
+          <button type="button" id="saveButton" style="display: none">
+            Save Password
+          </button>
+          <div id="passwordPreview"></div>
+
+        </form>
+
+        <div id="passwordOutput"></div>
+      </main>
+      <p class="paragraf">Noval Aditya</p>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
